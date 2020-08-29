@@ -2,6 +2,7 @@ version: 2
 jobs:
   build:
     docker:
+      - image: cimg/ruby:2.7.1-node
       - image: circleci/mysql
         environment:
           MYSQL_ROOT_PASSWORD: rootpw
