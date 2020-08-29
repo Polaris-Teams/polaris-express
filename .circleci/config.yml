@@ -19,6 +19,6 @@ jobs:
             curl https://www.npmjs.com/install.sh | sudo bash
 workflows:
   version: 2
-  build-deploy:
+  node-test:
     jobs:
       - node/test
