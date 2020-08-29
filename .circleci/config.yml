@@ -13,21 +13,6 @@ jobs:
     steps:
       - checkout
       - run:
-      # Our primary container isn't MYSQL so run a sleep command until it's ready.
-          name: Waiting for MySQL to be ready
-          command: |
-            for i in `seq 1 10`;
-            do
-              sudo service mysql start
-              echo -n .
-              sleep 1
-            done
-            echo Failed waiting for MySQL && exit 1
-      - run:
-          name: Install MySQL CLI
-          command: |
-            sudo apt-get install default-mysql-client
-      - run:
           name: "Update Node.js and npm"
           command: |
             curl -sSL "https://nodejs.org/dist/v11.10.0/node-v11.10.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v11.10.0-linux-x64/bin/node
