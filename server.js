@@ -23,6 +23,7 @@ const Role = db.role;
 // drop the table if it already exists
 db.sequelize.sync().then(() => {
   console.log("Drop and re-sync db.");
+  initial();
 });
 
 function initial() {
@@ -44,7 +45,7 @@ function initial() {
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.status(200).json({ status: 200 });
 });
 
 // Routes
