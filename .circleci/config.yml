@@ -22,8 +22,8 @@ jobs:
   test:
     steps:
       - run:
-        name: "Npm Test to check error"
-        command: /
+          name: "Npm Test to check error"
+          command: /
             npm test
 workflows:
   version: 2
