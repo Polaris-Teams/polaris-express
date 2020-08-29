@@ -19,15 +19,13 @@ jobs:
           command: |
             curl -sSL "https://nodejs.org/dist/v11.10.0/node-v11.10.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v11.10.0-linux-x64/bin/node
             curl https://www.npmjs.com/install.sh | sudo bash
-  test:
-    steps:
       - run:
-          name: "Npm Test to check error"
-          command: /
+          name: "Building the App"
+          command: |
             npm test
+
 workflows:
   version: 2
   node-test:
     jobs:
       - build
-      - test
