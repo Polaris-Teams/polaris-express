@@ -7,10 +7,10 @@ jobs:
       - image: cimg/ruby:2.7.1-node
       - image: circleci/mysql
         environment:
-          MYSQL_ROOT_PASSWORD: 
+          MYSQL_ROOT_PASSWORD: polaris
           MYSQL_DATABASE: polaris
           MYSQL_USER: polaris
-          MYSQL_PASSWORD: 
+          MYSQL_PASSWORD: polaris
 
     steps:
       - checkout
